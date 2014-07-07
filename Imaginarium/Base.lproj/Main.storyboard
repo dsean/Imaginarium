@@ -74,9 +74,27 @@
                     <view key="view" contentMode="scaleToFill" id="E8p-Rp-UvP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rIO-RK-wve">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="S70-gz-1aX" id="5gZ-ur-otU"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rIO-RK-wve" firstAttribute="leading" secondItem="E8p-Rp-UvP" secondAttribute="leading" id="JoT-V1-YRB"/>
+                            <constraint firstAttribute="trailing" secondItem="rIO-RK-wve" secondAttribute="trailing" id="SKy-v0-7Nw"/>
+                            <constraint firstAttribute="bottom" secondItem="rIO-RK-wve" secondAttribute="bottom" id="hbf-Ax-A2T"/>
+                            <constraint firstItem="rIO-RK-wve" firstAttribute="top" secondItem="E8p-Rp-UvP" secondAttribute="top" id="w6M-Rd-qgR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XYF-N7-NqB"/>
+                    <connections>
+                        <outlet property="scrollView" destination="rIO-RK-wve" id="ukW-Hg-fI4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7iJ-U2-z05" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
